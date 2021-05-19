@@ -14,4 +14,3 @@ gem "rainbow", "~> 3.0"
 
 gem "tty-prompt", "~> 0.23.1"
 
-gem "win32-sound", "~> 0.6.2"
