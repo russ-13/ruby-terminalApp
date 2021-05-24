@@ -3,7 +3,7 @@ GEM
   specs:
     artii (2.1.2)
     colorize (0.8.1)
-    ffi (1.15.0-x64-mingw32)
+    json (2.5.1)
     pastel (0.8.0)
       tty-color (~> 0.5)
     rainbow (3.0.0)
@@ -17,8 +17,6 @@ GEM
       tty-screen (~> 0.8)
       wisper (~> 2.0)
     tty-screen (0.8.1)
-    win32-sound (0.6.2)
-      ffi
     wisper (2.0.1)
 
 PLATFORMS
@@ -27,9 +25,9 @@ PLATFORMS
 DEPENDENCIES
   artii (~> 2.1)
   colorize (~> 0.8.1)
+  json (~> 2.5)
   rainbow (~> 3.0)
   tty-prompt (~> 0.23.1)
-  win32-sound (~> 0.6.2)
 
 BUNDLED WITH
    2.2.15
