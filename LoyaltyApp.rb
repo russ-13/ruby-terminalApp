@@ -30,7 +30,7 @@ def new_customer                                                    #Method for 
         puts " "
         puts Rainbow("     30m Booking = 10 Points").bg(:blue)
         puts Rainbow("     60m Booking = 20 Points").bg(:green)
-        puts Rainbow("Over 60m Booking = 30 Points").bg(:pink)
+        puts Rainbow("Over 60m Booking = 30 Points").bg(:purple)
         puts " "
         loyalty = gets.strip.to_i
             puts "Customer Created!"
@@ -46,9 +46,16 @@ def new_customer                                                    #Method for 
         puts " "
 end
 
-def view_customer                                   #Method for viewing customer card
-        puts "Enter Customer Phone Number to view thier information"                  
-            puts[:name][:phone]                     #print from specific hash matching from phone number
+def view_customer                                                       #Method for viewing customer card
+    puts "Which customer do you want to view? (Enter Moible Number)"    #Ask for desired mobile number
+    mobilenumber = gets.strip                                           #Store mobile number to lookup
+        $customersarr.each do |customer|
+            if customer[:phone]  == mobilenumber
+                puts "Name:#{customer[:name]} Phone:#{customer[:phone]} DOB:#{customer[:dob]} Points:#{customer[:loyalty]}"
+            else puts "Customer Not Found!"         
+            end   
+        end          
+            puts ""          #Spacing
 end
 
 def view_birthdays                              #Method displaying customers who have a birthday today
