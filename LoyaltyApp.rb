@@ -49,29 +49,37 @@ end
 def view_customer                                                       #Method for viewing customer card
     puts "Which customer do you want to view? (Enter Moible Number)"    #Ask for desired mobile number
     mobilenumber = gets.strip                                           #Store mobile number to lookup
-        $customersarr.each do |customer|
-            if customer[:phone]  == mobilenumber
-                puts "Name:#{customer[:name]} Phone:#{customer[:phone]} DOB:#{customer[:dob]} Points:#{customer[:loyalty]}"
-            else puts "Customer Not Found!"         
+        $customersarr.each do |customer|                                #iterate through array of customers
+            if customer[:phone]  == mobilenumber                        #for entered phone numnber
+                puts "Name:#{customer[:name]} Phone:#{customer[:phone]} DOB:#{customer[:dob]} Points:#{customer[:loyalty]}" #Print results
+            else puts Rainbow("Customer Not Found!").bg(:red)                            #Print this if not found
             end   
         end          
-            puts ""          #Spacing
+    puts ""                                                             #Spacing
 end
 
-def view_birthdays                              #Method displaying customers who have a birthday today
-    puts "What date would you like to check in DDMM format?"                #Ask for desired birthdate
-        birthdate = gets.strip                  #Store birthdate to lookup
-            $customersarr.each do |customer|
-                if customer[:dob]  == birthdate
-                    puts "#{customer[:name]} has a birthday! Contact them on #{customer[:phone]}"
-                else puts "No Birthdays Today!"         
-                end   
+def view_all
+    $customersarr.each do |customer| 
+        puts "Name:#{customer[:name]} Phone:#{customer[:phone]} DOB:#{customer[:dob]} Points:#{customer[:loyalty]}"
+    end
+end
+
+def view_birthdays                                                   #Method displaying customers who have a birthday today
+    puts "What date would you like to check in DDMM format?"         #Ask for desired birthdate
+        birthdate = gets.strip                                       #Store birthdate to lookup
+            $customersarr.each do |customer|                         #Iterate through array of customers
+                if customer[:dob]  == birthdate                      #if entered birthday is equal to recorded one
+                    puts "#{customer[:name]} has a birthday! Contact them on #{customer[:phone]}"   #Display Customer and phone number
+                else puts Rainbow("No Birthdays Today!").bg(:red)     #If nobody, display this
+                end  
             end          
-                puts ""          #Spacing
+                puts ""                                                #Spacing
 end    
 
-def new_booking                 #Method for Booking an existing Customer modifying the loyalty points variable up or down
-        puts "Enter Customer phone number Method"
+def new_booking   #not functional                                                     #Method for modifying the loyalty points variable up or down
+        puts "Select The Customers Phone Number You Wish To Book In"
+            bookingmobile = gets.strip
+        puts
 end    
                 
 def delete_customer             #Method for Deleting a Customer
@@ -114,13 +122,15 @@ exit = false
 
 while exit == false
 
-        choices = %w(Create\ Customer View\ Customer View\ Birthdays Book\ Customer Delete\ Customer Exit)
-        answer = prompt.enum_select("What are we doing today?", choices)
+        choices = %w(Create\ Customer View\ Customer View\ All\ Customers View\ Birthdays Book\ Customer Delete\ Customer Exit)
+        answer = prompt.enum_select("What are we doing today?", choices, per_page: 7)
 
     if answer == "Create Customer"
         new_customer
             elsif answer == "View Customer"
                 view_customer
+            elsif answer == "View All Customers"
+                view_all
             elsif answer == "View Birthdays"
                 view_birthdays
             elsif answer == "Book Customer"
