@@ -5,19 +5,25 @@ require 'tty-prompt'
 
 $customersarr = []                                                  #Create customers array as global variable
 
+def points_guide                                                       #Method for
+    puts " "
+    puts Rainbow("     30m Booking = 10 Points").bg(:blue)          #Colored point guide
+    puts Rainbow("     60m Booking = 20 Points").bg(:green)
+    puts Rainbow("Over 60m Booking = 30 Points").bg(:purple)
+    puts " "
+end
+
 def new_customer                                                    #Method for New Customer creation
     puts "\n"
     puts "Enter Customer Detals Below!"
-        user_name = ""                                              
-            loop do 
+        user_name = ""                                              #Set variable for user_name
+            loop do                                                 #Start loop
                 puts "Please type the customers name"
-                    user_name = gets.strip
-                    if user_name.empty?
-                        puts Rainbow("This field can't be blank").bg(:red)
-                    elsif user_name =~ (/\d/)
+                    user_name = gets.strip                          #Make user input as user_name
+                    if user_name.empty?                                             #Handle error for no input
+                        puts Rainbow("This field can't be blank").bg(:red)          
+                    elsif user_name =~ (/\d/)                                       #Handle error for numbers in text field
                         puts Rainbow("This field can't have numbers").bg(:red)
-                   # elsif user_name =~ (/\W/)
-                    #    puts Rainbow("This field can't use symbols").bg(:red)
                     else 
                         break
                     end
@@ -27,16 +33,12 @@ def new_customer                                                    #Method for 
     puts "Enter Customer Date Of Birth in DDMM Format"
         user_dob = gets.strip
     puts "How many initial loyalty points would you like to assign?"
-        puts " "
-        puts Rainbow("     30m Booking = 10 Points").bg(:blue)
-        puts Rainbow("     60m Booking = 20 Points").bg(:green)
-        puts Rainbow("Over 60m Booking = 30 Points").bg(:purple)
-        puts " "
-        loyalty = gets.strip.to_i
-            puts "Customer Created!"
+            points_guide
+            loyalty = gets.strip.to_i
+    puts "Customer Created!"
                                                                                  
         customer = {}                               #Creating a hash for this customer                                 
-            customer[:name] = user_name                                     
+            customer[:name] = user_name             #Adding user input to populate hash                     
             customer[:phone] = user_phone     
             customer[:dob] = user_dob
             customer[:loyalty] = loyalty                               
@@ -52,7 +54,7 @@ def view_customer                                                       #Method 
         $customersarr.each do |customer|                                #iterate through array of customers
             if customer[:phone]  == mobilenumber                        #for entered phone numnber
                 puts "Name:#{customer[:name]} Phone:#{customer[:phone]} DOB:#{customer[:dob]} Points:#{customer[:loyalty]}" #Print results
-            else puts Rainbow("Customer Not Found!").bg(:red)                            #Print this if not found
+            else puts Rainbow("Customer Not Found!").bg(:red)                            #Print this if customer not found
             end   
         end          
     puts ""                                                             #Spacing
@@ -91,12 +93,7 @@ def new_booking
                choices = %w(Add\ Points Redeem\ Points)
                answer = prompt.enum_select("What would you like to do now", choices, per_page: 2)
                    if answer == "Add\ Points"
-                       puts "How Many points would you like to add?"
-                       puts " "
-                       puts Rainbow("     30m Booking = 10 Points").bg(:blue)
-                       puts Rainbow("     60m Booking = 20 Points").bg(:green)
-                       puts Rainbow("Over 60m Booking = 30 Points").bg(:purple)
-                       puts " "
+                       points_guide 
                        newpoints = gets.strip.to_i
                     customer[:loyalty] == customer[:loyalty] += newpoints
                     
@@ -104,11 +101,7 @@ def new_booking
 
                     elsif answer == "Redeem Points"
                         puts "How Many points would you like to redeem?"
-                        puts " "
-                        puts Rainbow("     30m Booking = 50 Points").bg(:blue)
-                        puts Rainbow("     60m Booking = 90 Points").bg(:green)
-                        puts Rainbow("Over 60m Booking = 130 Points").bg(:purple)
-                        puts " "
+                        points_guide
                         newpoints = gets.strip.to_i
                      customer[:loyalty] == customer[:loyalty] -= newpoints
                      
