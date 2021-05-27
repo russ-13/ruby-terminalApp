@@ -8,7 +8,7 @@ $customersarr = []                                                  #Create cust
 def new_customer                                                    #Method for New Customer creation
     puts "\n"
     puts "Enter Customer Detals Below!"
-        user_name = ""
+        user_name = ""                                              
             loop do 
                 puts "Please type the customers name"
                     user_name = gets.strip
@@ -16,8 +16,8 @@ def new_customer                                                    #Method for 
                         puts Rainbow("This field can't be blank").bg(:red)
                     elsif user_name =~ (/\d/)
                         puts Rainbow("This field can't have numbers").bg(:red)
-                    elsif user_name =~ (/\W/)
-                        puts Rainbow("This field can't use symbols").bg(:red)
+                   # elsif user_name =~ (/\W/)
+                    #    puts Rainbow("This field can't use symbols").bg(:red)
                     else 
                         break
                     end
@@ -59,8 +59,11 @@ def view_customer                                                       #Method 
 end
 
 def view_all
+    puts "\n"
+    puts "This is a list of all current customers:"
+    puts "\n"
     $customersarr.each do |customer| 
-        puts "Name:#{customer[:name]} Phone:#{customer[:phone]} DOB:#{customer[:dob]} Points:#{customer[:loyalty]}"
+        puts "Name: #{customer[:name]} Phone: #{customer[:phone]} DOB: #{customer[:dob]} Points: #{customer[:loyalty]}"
     end
 end
 
@@ -76,10 +79,49 @@ def view_birthdays                                                   #Method dis
                 puts ""                                                #Spacing
 end    
 
-def new_booking   #not functional                                                     #Method for modifying the loyalty points variable up or down
-        puts "Select The Customers Phone Number You Wish To Book In"
-            bookingmobile = gets.strip
-        puts
+def new_booking  
+
+    puts "Please enter the customers mobile number (no spaces!)"         #Ask for desired customer
+    mobilenumber = gets.strip                                       #Store birthdate to lookup
+        $customersarr.each do |customer|                         #Iterate through array of customers
+            if customer[:phone]  == mobilenumber                      #if entered birthday is equal to recorded one
+                puts "#{customer[:name]} Has #{customer[:loyalty]} Loyalty Points!"   #Display Customer and phone number
+                prompt = TTY::Prompt.new
+
+               choices = %w(Add\ Points Redeem\ Points)
+               answer = prompt.enum_select("What would you like to do now", choices, per_page: 2)
+                   if answer == "Add\ Points"
+                       puts "How Many points would you like to add?"
+                       puts " "
+                       puts Rainbow("     30m Booking = 10 Points").bg(:blue)
+                       puts Rainbow("     60m Booking = 20 Points").bg(:green)
+                       puts Rainbow("Over 60m Booking = 30 Points").bg(:purple)
+                       puts " "
+                       newpoints = gets.strip.to_i
+                    customer[:loyalty] == customer[:loyalty] += newpoints
+                    
+                    puts "#{customer[:name]} Now has #{customer[:loyalty]} Loyalty Points!"
+
+                    elsif answer == "Redeem Points"
+                        puts "How Many points would you like to redeem?"
+                        puts " "
+                        puts Rainbow("     30m Booking = 50 Points").bg(:blue)
+                        puts Rainbow("     60m Booking = 90 Points").bg(:green)
+                        puts Rainbow("Over 60m Booking = 130 Points").bg(:purple)
+                        puts " "
+                        newpoints = gets.strip.to_i
+                     customer[:loyalty] == customer[:loyalty] -= newpoints
+                     
+                     puts "#{customer[:name]} Now has #{customer[:loyalty]} Loyalty Points!"
+ 
+                    end
+
+
+            else puts Rainbow("Customer not found!").bg(:pink)     #If nobody, display this
+            end  
+        end          
+            puts ""   
+
 end    
                 
 def delete_customer             #Method for Deleting a Customer
@@ -107,11 +149,13 @@ password = prompt.mask("Please Enter Staff Password?")
 
 puts " "
 
+
 while 
     if password == staff_pw
         puts Rainbow("Access Granted").bg(:green)
     else
         puts Rainbow("Incorrect Password").bg(:red)
+        puts "\n"
         password = prompt.mask("Please Enter Staff Password?")
     end
 end
