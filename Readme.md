@@ -12,18 +12,24 @@ It solves a real world problem in a business that I own,  where loyalty cards ar
 
 ### Target Audience
 
-The target audience will be the behind the counter staff working at the store, they will be entering the information and retrieving it to see if customers get a discount, or to add new customers and view their contact information. 
+The target audience will be the behind the counter staff of a day spa business working at the store on any particular day. It could be very simply modified for many types of businesses needing a customer database and loyalty point system.
 
 ### How will the Target Audience Use It?
 
 The store worker will run the program after entering their password, and exit it at the end of their shift. They can  select from these options.
-1.	Add New Customer
-2.	Book in existing customer
-
+  1) Create Customer
+  2) View Customer
+  3) View All Customers
+  4) View Birthdays
+  5) Book Customer
+  6) Delete Customer
+  7) Exit
 
 Upon selecting add new customer, they will be able to assign a new customer to the database and enter their contact information, and assign a beginning number of loyalty points depending on the type of service they are booking in at the time. 
-Upon booking in a new customer, they will search for a return the existing customer, and be presented with how many loyalty points they have. The user can then reset their points and not charge the customer for the current booking, or add a number of points depending on the booking they are making. 
+When booking in a new customer, they will search for a return the existing customer, and be presented with how many loyalty points they have. The user can then reset their points and not charge the customer for the current booking, or add a number of points depending on the booking they are making. 
 The customers details and loyalty points will then be saved for the next time they arrive. 
+
+
 List of features
 1.	Add new customers details, phone number, name DOB and points accrued 
 2.	View current points, and add to them manually depending on booking
