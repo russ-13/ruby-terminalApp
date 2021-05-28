@@ -29,11 +29,15 @@ Upon selecting add new customer, they will be able to assign a new customer to t
 When booking in a new customer, they will search for a return the existing customer, and be presented with how many loyalty points they have. The user can then reset their points and not charge the customer for the current booking, or add a number of points depending on the booking they are making. 
 The customers details and loyalty points will then be saved for the next time they arrive. 
 
-
-List of features
+### List of features
 1.	Add new customers details, phone number, name DOB and points accrued 
-2.	View current points, and add to them manually depending on booking
-3.	Reset the points number when they are ‘cashed in’
-4.	Delete old customer records
+2.	View individual customer details, and display ALL customers
+3.	Delete old customer records
+4.	Reset the points number when they are ‘cashed in’, and add them when a customer makes a booking
 5.	View customer card/information 
 6.	See which customers have a birthday today
+7.  Password Protection so only staff can use the program
+8.  Import and Export a file to store customers (This feature was too complex and was abandoned!)
+
+These features are described in my Trello board and in the included screenshots below. 
+
