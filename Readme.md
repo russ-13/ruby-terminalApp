@@ -97,45 +97,45 @@ Below I have included screenshots of my day to day progress of the Trello board,
 
 Day 1
 
-![Trello Progress](./docs/Day1.jpg)
+![Trello Progress](./docs/Day1.JPG)
 
 Day 2
 
-![Trello Progress](./docs/Day2.jpg)
+![Trello Progress](./docs/Day2.JPG)
 
 Day 3
 
-![Trello Progress](./docs/Day3.jpg)
+![Trello Progress](./docs/Day3.JPG)
 
 Day 4
 
-![Trello Progress](./docs/Day4.jpg)
+![Trello Progress](./docs/Day4.JPG)
 
 Day 5
 
-![Trello Progress](./docs/Day5.jpg)
+![Trello Progress](./docs/Day5.JPG)
 
 Day 6
 
-![Trello Progress](./docs/Day6.jpg)
+![Trello Progress](./docs/Day6.JPG)
 
 Day 7
 
-![Trello Progress](./docs/Day7.jpg)
+![Trello Progress](./docs/Day7.JPG)
 
 Below are my feature cards.
 
-![Trello Features](./docs/feature1.jpg)
+![Trello Features](./docs/feature1.JPG)
 
-![Trello Features](./docs/feature2.jpg)
+![Trello Features](./docs/feature2.JPG)
 
-![Trello Features](./docs/feature3.jpg)
+![Trello Features](./docs/feature3.JPG)
 
-![Trello Features](./docs/feature4.jpg)
+![Trello Features](./docs/feature4.JPG)
 
-![Trello Features](./docs/feature5.jpg)
+![Trello Features](./docs/feature5.JPG)
 
-![Trello Features](./docs/feature6.jpg)
+![Trello Features](./docs/feature6.JPG)
 
 ## Help Documentation
 
