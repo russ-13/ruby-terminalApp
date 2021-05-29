@@ -139,3 +139,54 @@ Below are my feature cards.
 
 ## Help Documentation
 
+This will allow the staff member to login, please inform them of the password before use, and see your system administrator for instructions on how to change the password should an employee leave.
+
+The staff password for the app is "1234"
+
+
+### Steps to install
+
+This application will need Ruby to be installed. Please follow the link and instructions [here](https://www.ruby-lang.org/en/documentation/installation/) to install Ruby.
+
+The following commands will then need to be run from your terminal app, preferably Ubuntu or Git. Git can be found for all operating systems [here](https://git-scm.com/downloads)
+
+Then run these commands:
+
+```git clone git@github.com:russ-13/TerminalApp.git```
+
+This will copy the repo to your local system. 
+
+You can now install the gem bundler, which allows the gems or plugins to run. Run these commands:
+
+```gem install bundler```
+
+```bundle install```
+
+Alternatively you can install the gems individually by running these commands:
+
+```gem install tty-prompt```
+
+```gem install colorize```
+
+```gem install rainbow```
+
+```gem install artii```
+
+You can now run the app with this command:
+
+```./run_app.sh```
+
+The staff password for the app is "1234"
+
+### Dependencies
+
+This app uses four Ruby Gems that will be installed by the bundler.
+
+1. gem "artii", "~> 2.1"
+2. gem "colorize", "~> 0.8.1"
+3. gem "rainbow", "~> 3.0"
+4. gem "tty-prompt", "~> 0.23.1"
+
+### System Requirements
+
+There are no hardware requirements for this app to run. Only software requirements listed above in the Steps To Install section of this document.
