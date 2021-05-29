@@ -1,0 +1,167 @@
+commit 5689c9493758d6e95479a98e3c1f0eff73bb7535
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Sat May 29 16:41:04 2021 +1000
+
+    Final Code and Readme
+
+commit f0bc6916457d71b81ffc552d1221261e2b67af1e
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Sat May 29 14:50:29 2021 +1000
+
+    Documentation Additions
+
+commit c49dc8fe218905d81caec67e174da13d61a05122
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Sat May 29 14:44:12 2021 +1000
+
+    Documentation Additions
+
+commit 393126a5ca7b57bf03ef9ea82a9dd4909ba810aa
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Sat May 29 14:25:06 2021 +1000
+
+    Documentation Additions
+
+commit 16ac6a9657b9dda315aa203bfc883989ddac3def
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Sat May 29 13:40:29 2021 +1000
+
+    Script File Update
+
+commit b4c8a679a5e4f30c69b405f8cb32f678965f15d7
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Sat May 29 13:30:05 2021 +1000
+
+    Script File
+
+commit 452e740ccd4f63754da4c940944624e27d2ee20a
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Sat May 29 13:10:45 2021 +1000
+
+    File system changes and Readme update
+
+commit bc12c78db71ae82f79ca1c6ddaf712cacbc98096
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Fri May 28 20:18:20 2021 +1000
+
+    modified file system for rubric
+
+commit c720453113acbdd8e8df4458cca8a2f5c634e85d
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Fri May 28 19:43:38 2021 +1000
+
+    Added Trello shots and PPT
+
+commit c557ef2469151d95c58cbdf28e5ed5c7c52821ef
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Fri May 28 16:09:50 2021 +1000
+
+    Method Now working
+
+commit d802593d47516eaf2cb9f417ab061ea5587f3f42
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Fri May 28 16:07:39 2021 +1000
+
+    More Readme Additions
+
+commit 8d6c4e4381aa63159662fab7c18f4eb6e63c776c
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Thu May 27 16:03:10 2021 +1000
+
+    Updated readme file
+
+commit 4bfafbf491755227e9ca9a51b39dbb2d198ba368
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Thu May 27 15:40:52 2021 +1000
+
+    Readme Update
+
+commit 10600e287f1e3ac761418ef978aced70d0848f02
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Thu May 27 15:03:59 2021 +1000
+
+    Tidy up for code and comments
+
+commit b13d80a17fffa75916f388fcbf71b47ad39c5b75
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Thu May 27 12:02:45 2021 +1000
+
+    DRY'd code with method for points_guide
+
+commit c62a3156a0ab5bf5720c5de0d6cba098efafbc77
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Thu May 27 11:53:46 2021 +1000
+
+    Added Book Customer code
+
+commit a97f27d062f23c9ffa79f7a0ccb49b3005e10730
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Wed May 26 14:10:17 2021 +1000
+
+    code structuring and comments
+
+commit 3b68527f381bad6593d03520d86e668dc4293e7b
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Tue May 25 15:15:52 2021 +1000
+
+    Added View Customer Method
+
+commit 46ad8f179d6415a6fdbf34a43d0af22224476da6
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Tue May 25 14:17:41 2021 +1000
+
+    Added customer delete
+
+commit e66b6717ef8f90eb138930205c386ff0be848054
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Tue May 25 14:16:47 2021 +1000
+
+    created gitlog and DRY'd code
+
+commit 593539d130d9aea3d555523bfec9758588ae1b32
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Tue May 25 14:15:46 2021 +1000
+
+    fixed indentation and cleaned up new customer
+
+commit 510d85d6611fdd7a15129d182b15b163171afbd3
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Tue May 25 14:06:37 2021 +1000
+
+    added birthday lookuip method
+
+commit a1d3728b792f8405c04d014ac9ba4fbccec5b3ae
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Mon May 24 14:53:18 2021 +1000
+
+    Completed Delete Customer Feature
+
+commit c3365b867037b91b2dcde9ede27e91b308fe7727
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Mon May 24 11:01:20 2021 +1000
+
+    Method for create customer
+
+commit d17731fee6504b14de5dea15dc51285e46432f5b
+Author: Russ-13 <contactrussellmoore@gmail.com>
+Date:   Wed May 19 13:35:26 2021 +1000
+
+    Added methods for menu items
+
+commit f0b67cd0d4950a616dd315e6c6531a92212717dc
+Author: Russ-13 <contactrussellmoore@gmail.com>
+Date:   Tue May 18 14:09:24 2021 +1000
+
+    Added TTY menu selector
+
+commit 8c37dc31ccbd962fcc3007cc10c7447e4866df02
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Tue May 18 11:33:16 2021 +1000
+
+    Added Ascii Title Page and Gem Bundle
+
+commit e1d74d7e34cda629fb3b28adda84c1dc567901af
+Author: russ13 <contactrussellmoore@gmail.com>
+Date:   Tue May 18 10:03:47 2021 +1000
+
+    initial commit
