@@ -137,10 +137,6 @@ Below are my feature cards.
 
 ![Trello Features](./docs/Feature6.JPG)
 
-## Error Handling
-
-Error handling in this app is localized to entering a blank input or numbers where there should be letter in the customer name field. 
-
 
 ## Help Documentation
 
