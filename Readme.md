@@ -135,7 +135,7 @@ Below are my feature cards.
 
 ![Trello Features](./docs/feature5.JPG)
 
-![Trello Features](./docs/feature6.JPG)
+![Trello Features](./docs/Feature6.JPG)
 
 ## Help Documentation
 
