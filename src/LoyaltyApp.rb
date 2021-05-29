@@ -32,14 +32,18 @@ def new_customer                                                    #Method for 
             break
         end
     end
-        puts "Enter Customer Phone Number"
+
+        puts "Enter Customer Phone Number (No Spaces!)"             
         user_phone = gets.strip
+
         puts "Enter Customer Date Of Birth in DDMM Format"
         user_dob = gets.strip
+                                                         
         puts "How many initial loyalty points would you like to assign?"
         points_guide
         loyalty = gets.strip.to_i
-        puts "Customer Created!"
+
+    puts "Customer Created!"
                                                                                  
     customer = {}                               #Creating a hash for this customer                                 
         customer[:name] = user_name             #Adding user input to populate hash                     
@@ -48,8 +52,7 @@ def new_customer                                                    #Method for 
         customer[:loyalty] = loyalty                               
         $customersarr.push(customer)            #Pushing this hash into 'customerarr' array
             puts "\n "
-            puts $customersarr                  #Print array for testing purposes
-            puts " \n"
+            
 end
 
 #----------------------------------------View Customer Method--------------------------------------#
